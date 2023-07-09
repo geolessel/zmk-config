@@ -28,12 +28,12 @@
 // ┠───────┼───────┼───────┼───────┼───────┼───────┨     ┠───────┼───────┼───────┼───────┼───────┼───────┨
 // ┃ SHFT  │   Z   │   X   │   C   │   V   │   B   ┃     ┃   N   │   M   │   ,   │  .    │   /   │  SHFT ┃
 // ┗━━━━━━━┷━━━━━━━┷━━━━━━━╅───────┼───────┼───────┨     ┠───────┼───────┼───────╆━━━━━━━┷━━━━━━━┷━━━━━━━┛
-//                         ┃  CMD  │ OPTN  │ NUMPD ┃     ┃ NUMPD │  SPC  │  ALT  ┃
+//                         ┃  OPT  │  CMD  │ NUMPD ┃     ┃ NUMPD │  SPC  │  OPT  ┃
 //                         ┗━━━━━━━┷━━━━━━━┷━━━━━━━┛     ┗━━━━━━━┷━━━━━━━┷━━━━━━━┛
     &kp TAB    &kp Q  &kp W  &kp E    &kp R    &kp T      &kp Y    &kp U      &kp I      &kp O    &kp P     &kp BSPC
     &kp LCTRL  &kp A  &kp S  &kp D    &kp F    &kp G      &kp H    &kp J      &kp K      &kp L    &kp SEMI  &kp RET
     &kp LSHFT  &kp Z  &kp X  &kp C    &kp V    &kp B      &kp N    &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                             &kp LGUI &kp LALT &mo NUMPAD &mo 1    &kp SPACE  &kp RALT
+                             &kp LOPT &kp LCMD &mo NUMPAD &mo 1    &kp SPACE  &kp ROPT
       >;
     };
 
