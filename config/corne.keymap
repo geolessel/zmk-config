@@ -11,9 +11,7 @@
 #define BASE 0
 #define NUMPAD 1
 
-#define LCMD LGUI
 #define LOPT LALT
-#define RCMD RGUI
 #define ROPT RALT
 
 / {
