@@ -52,6 +52,7 @@
                                &trans   &trans   &trans   &trans  &kp N0  &kp DOT
       >;
     };
+  };
 };
 
 // XXX_layer {
