@@ -73,10 +73,11 @@
                                &kp N0  &kp DOT   &trans       &trans     &trans       &sl FNS
       >;
     };
+
     function_layer {
       bindings = <
 // ┏━━━━━━━┯━━━━━━━┯━━━━━━━┯━━━━━━━┯━━━━━━━┯━━━━━━━┓                     ┏━━━━━━━┯━━━━━━━┯━━━━━━━┯━━━━━━━┯━━━━━━━┯━━━━━━━┓
-// ┃       │       │       │       │       │BT CLR ┃                     ┃       │       │       │       │       │       ┃
+// ┃       │       │       │       │       │BT CLR ┃                     ┃ MUTE* │       │       │       │       │       ┃
 // ┠───────┼───────┼───────┼───────┼───────┼───────┨                     ┠───────┼───────┼───────┼───────┼───────┼───────┨
 // ┃       │ BT 4  │ BT 5  │       │       │       ┃                     ┃       │       │       │       │       │       ┃
 // ┠───────┼───────┼───────┼───────┼───────┼───────┨                     ┠───────┼───────┼───────┼───────┼───────┼───────┨
@@ -84,10 +85,11 @@
 // ┗━━━━━━━┷━━━━━━━┷━━━━━━━╅───────┼───────┼───────┨                     ┠───────┼───────┼───────╆━━━━━━━┷━━━━━━━┷━━━━━━━┛
 //                         ┃       │       │       ┃                     ┃       │       │       ┃
 //                         ┗━━━━━━━┷━━━━━━━┷━━━━━━━┛                     ┗━━━━━━━┷━━━━━━━┷━━━━━━━┛
-    &trans  &trans        &trans        &trans        &trans  &bt BT_CLR  &trans  &trans  &trans  &trans  &trans  &trans
-    &trans  &bt BT_SEL 4  &bt BT_SEL 5  &trans        &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-    &trans  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-                                        &trans        &trans  &trans      &trans  &trans  &trans
+//  MUTE*: use as a canary to make sure you can get to this layer
+    &trans  &trans        &trans        &trans        &trans  &bt BT_CLR  &kp C_MUTE  &trans  &trans  &trans  &trans  &trans
+    &trans  &bt BT_SEL 4  &bt BT_SEL 5  &trans        &trans  &trans      &trans      &trans  &trans  &trans  &trans  &trans
+    &trans  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans  &trans      &trans      &trans  &trans  &trans  &trans  &trans
+                                        &trans        &trans  &trans      &trans      &trans  &trans
       >;
     };
   };
