@@ -33,10 +33,10 @@
 // ┗━━━━━━━┷━━━━━━━┷━━━━━━━╅───────┼───────┼───────┨              ┠───────┼───────┼───────╆━━━━━━━┷━━━━━━━┷━━━━━━━┛
 //                         ┃NUMPAD │  NAV  │  TAB  ┃              ┃ NUM2  │ SPACE │       ┃
 //                         ┗━━━━━━━┷━━━━━━━┷━━━━━━━┛              ┗━━━━━━━┷━━━━━━━┷━━━━━━━┛
-    &none &kp Q      &kp W      &kp E       &kp R       &kp T      &kp Y    &kp U     &kp I       &kp O      &kp P         &kp BSPC
-    &none &mt LCMD A &mt LOPT S &mt LCTRL D &mt LSHFT F &kp G      &kp H    &tdj      &mt RCTRL K &mt ROPT L &mt RCMD SEMI &kp RET
-    &none &kp Z      &kp X      &kp C       &kp V       &kp B      &kp N    &kp M     &kp COMMA   &kp DOT    &kp FSLH      &none
-                                &mo NUMPAD  &mo NAV     &kp TAB    &mo NUM2 &kp SPACE &none
+    &none &kp Q      &kp W      &kp E       &kp R       &kp T      &kp Y    &kp U       &kp I       &kp O      &kp P         &kp BSPC
+    &none &hm LCMD A &hm LOPT S &hm LCTRL D &hm LSHFT F &kp G      &kp H    &hm RSHFT J &hm RCTRL K &hm ROPT L &hm RCMD SEMI &kp RET
+    &none &kp Z      &kp X      &kp C       &kp V       &kp B      &kp N    &kp M       &kp COMMA   &kp DOT    &kp FSLH      &none
+                                &mo NUMPAD  &mo NAV     &kp TAB    &mo NUM2 &kp SPACE   &none
       >;
     };
 
@@ -169,6 +169,30 @@
       #binding-cells = <0>;
       tapping-term-ms = <200>;
       bindings = <&mt RSHFT J>, <&kp J>;
+    };
+    tdk: tap_dance_k {
+      compatible = "zmk,behavior-tap-dance";
+      label = "TAP_DANCE_K";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      bindings = <&mt RCTRL K>, <&kp K>;
+    };
+    tdl: tap_dance_l {
+      compatible = "zmk,behavior-tap-dance";
+      label = "TAP_DANCE_L";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      bindings = <&mt ROPT L>, <&kp L>;
+    };
+
+    hm: homerow_mods { // https://zmk.dev/docs/behaviors/hold-tap
+      compatible = "zmk,behavior-hold-tap";
+      label = "HOMEROW_MOS";
+      #binding-cells = <2>;
+      tapping-term-ms = <200>;
+      quick-tap-ms = <100>;
+      flavor = "tap-preferred";
+      bindings = <&kp>, <&kp>;
     };
   };
 };
