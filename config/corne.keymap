@@ -115,7 +115,7 @@
     function_layer { // FNS
       bindings = <
 // ┏━━━━━━━┯━━━━━━━┯━━━━━━━┯━━━━━━━┯━━━━━━━┯━━━━━━━┓                     ┏━━━━━━━┯━━━━━━━┯━━━━━━━┯━━━━━━━┯━━━━━━━┯━━━━━━━┓
-// ┃       │       │       │       │       │BT CLR ┃                     ┃ MUTE* │       │       │       │       │       ┃
+// ┃       │       │       │       │       │BT CLR ┃                     ┃ MUTE* │       │       │       │       │XPWROFF┃
 // ┠───────┼───────┼───────┼───────┼───────┼───────┨                     ┠───────┼───────┼───────┼───────┼───────┼───────┨
 // ┃       │ BT 4  │ BT 5  │       │       │       ┃                     ┃       │       │       │       │       │       ┃
 // ┠───────┼───────┼───────┼───────┼───────┼───────┨                     ┠───────┼───────┼───────┼───────┼───────┼───────┨
@@ -124,7 +124,8 @@
 //                         ┃       │       │       ┃                     ┃       │       │       ┃
 //                         ┗━━━━━━━┷━━━━━━━┷━━━━━━━┛                     ┗━━━━━━━┷━━━━━━━┷━━━━━━━┛
 //  MUTE*: use as a canary to make sure you can get to this layer
-    &trans  &trans        &trans        &trans        &trans  &bt BT_CLR  &kp C_MUTE  &trans  &trans  &trans  &trans  &trans
+//  XPWROFF: disable external power from the board
+    &trans  &trans        &trans        &trans        &trans  &bt BT_CLR  &kp C_MUTE  &trans  &trans  &trans  &trans  &ext_power EP_OFF
     &trans  &bt BT_SEL 4  &bt BT_SEL 5  &trans        &trans  &trans      &trans      &trans  &trans  &trans  &trans  &trans
     &trans  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans  &trans      &trans      &trans  &trans  &trans  &trans  &trans
                                         &trans        &trans  &trans      &trans      &trans  &trans
