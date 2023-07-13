@@ -28,16 +28,16 @@
 // ┏━━━━━━━┯━━━━━━━┯━━━━━━━┯━━━━━━━┯━━━━━━━┯━━━━━━━┓              ┏━━━━━━━┯━━━━━━━┯━━━━━━━┯━━━━━━━┯━━━━━━━┯━━━━━━━┓
 // ┃       │   Q   │   W   │   E   │   R   │   T   ┃              ┃   Y   │   U   │   I   │   O   │   P   │  BKSP ┃
 // ┠───────┼───────┼───────┼───────┼───────┼───────┨              ┠───────┼───────┼───────┼───────┼───────┼───────┨
-// ┃       │  A ⌘ │  S ⌥ │  D ⌃  │  F ⇧  │   G   ┃              ┃   H   │  J ⇧  │  K ⌃  │  L ⌥ │ ; : ⌘│  RET  ┃
+// ┃       │  A ⌘ │  S ⌥ │  D ⌃  │   F   │   G   ┃              ┃   H   │   J   │  K ⌃  │  L ⌥ │ ; : ⌘│  RET  ┃
 // ┠───────┼───────┼───────┼───────┼───────┼───────┨              ┠───────┼───────┼───────┼───────┼───────┼───────┨
-// ┃       │   Z   │   X   │   C   │   V   │   B   ┃              ┃   N   │   M   │  , <  │  . >  │  / ?  │       ┃
+// ┃ SHIFT │   Z   │   X   │   C   │   V   │   B   ┃              ┃   N   │   M   │  , <  │  . >  │  / ?  │ SHIFT ┃
 // ┗━━━━━━━┷━━━━━━━┷━━━━━━━╅───────┼───────┼───────┨              ┠───────┼───────┼───────╆━━━━━━━┷━━━━━━━┷━━━━━━━┛
 //                         ┃NUMPAD │  NAV  │  TAB  ┃              ┃ NUM2  │ SPACE │       ┃
 //                         ┗━━━━━━━┷━━━━━━━┷━━━━━━━┛              ┗━━━━━━━┷━━━━━━━┷━━━━━━━┛
-    &none &kp Q      &kp W      &kp E       &kp R       &kp T      &kp Y    &kp U       &kp I       &kp O      &kp P         &kp BSPC
-    &none &hm LCMD A &hm LOPT S &hm LCTRL D &hm LSHFT F &kp G      &kp H    &hm RSHFT J &hm RCTRL K &hm ROPT L &hm RCMD SEMI &kp RET
-    &none &kp Z      &kp X      &kp C       &kp V       &kp B      &kp N    &kp M       &kp COMMA   &kp DOT    &kp FSLH      &none
-                                &mo NUMPAD  &mo NAV     &kp TAB    &mo NUM2 &kp SPACE   &none
+    &none     &kp Q      &kp W      &kp E       &kp R   &kp T      &kp Y    &kp U     &kp I       &kp O      &kp P         &kp BSPC
+    &none     &hm LCMD A &hm LOPT S &hm LCTRL D &kp F   &kp G      &kp H    &kp J     &hm RCTRL K &hm ROPT L &hm RCMD SEMI &kp RET
+    &kp LSHFT &kp Z      &kp X      &kp C       &kp V   &kp B      &kp N    &kp M     &kp COMMA   &kp DOT    &kp FSLH      &kp RSHFT
+                                    &mo NUMPAD  &mo NAV &kp TAB    &mo NUM2 &kp SPACE &none
       >;
     };
 
