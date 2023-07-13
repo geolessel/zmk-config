@@ -165,28 +165,6 @@
 ////// BEHAVIORS ///////////////////////////////////////////////////////////////////////////////////////
 / {
   behaviors {
-    tdj: tap_dance_j {
-      compatible = "zmk,behavior-tap-dance";
-      label = "TAP_DANCE_J";
-      #binding-cells = <0>;
-      tapping-term-ms = <200>;
-      bindings = <&mt RSHFT J>, <&kp J>;
-    };
-    tdk: tap_dance_k {
-      compatible = "zmk,behavior-tap-dance";
-      label = "TAP_DANCE_K";
-      #binding-cells = <0>;
-      tapping-term-ms = <200>;
-      bindings = <&mt RCTRL K>, <&kp K>;
-    };
-    tdl: tap_dance_l {
-      compatible = "zmk,behavior-tap-dance";
-      label = "TAP_DANCE_L";
-      #binding-cells = <0>;
-      tapping-term-ms = <200>;
-      bindings = <&mt ROPT L>, <&kp L>;
-    };
-
     hm: homerow_mods { // https://zmk.dev/docs/behaviors/hold-tap
       compatible = "zmk,behavior-hold-tap";
       label = "HOMEROW_MOS";
