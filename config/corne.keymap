@@ -108,6 +108,7 @@
 // ┗━━━━━━━┷━━━━━━━┷━━━━━━━╅───────┼───────┼───────┨                     ┠───────┼───────┼───────╆━━━━━━━┷━━━━━━━┷━━━━━━━┛
 //                         ┃       │       │       ┃                     ┃       │       │       ┃
 //                         ┗━━━━━━━┷━━━━━━━┷━━━━━━━┛                     ┗━━━━━━━┷━━━━━━━┷━━━━━━━┛
+//  Reach this layer: hold NUMPAD + NAV together, or tap STKY FN on NUM2/NAV
 //  MUTE*: use as a canary to make sure you can get to this layer
 //  BOOT, RESET: act only on the half that is pressed, so each half has its own
 //  SOFTOFF: hold 1 s to turn both halves fully off; press each half's reset button to turn on
@@ -116,6 +117,23 @@
     &soft_off    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans  &trans      &trans      &trans  &trans  &trans  &trans  &trans
                                              &trans        &trans  &trans      &trans      &trans  &trans
       >;
+    };
+  };
+};
+
+////// CONDITIONAL LAYERS //////////////////////////////////////////////////////////////////////////////
+// Hold both left thumb layer keys to get FNS:
+//                         ┏━━━━━━━┯━━━━━━━┯━━━━━━━┓
+//                         ┃NUMPAD │  NAV  │  TAB  ┃
+//                         ┗━━━┯━━━┷━━━┯━━━┷━━━━━━━┛
+//                             └── + ──┘
+//                                FNS
+/ {
+  conditional_layers {
+    compatible = "zmk,conditional-layers";
+    tri_layer {
+      if-layers = <NUMPAD NAV>;
+      then-layer = <FNS>;
     };
   };
 };

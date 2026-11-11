@@ -26,6 +26,9 @@ The keymap defines 5 layers, combos, and a custom hold-tap behavior. Each layer 
 - `NAV` (3): Brackets/parens on left, arrows + media on right. Similar to NUM2 but without numbers. The left half is `&trans`, so home row mods stay active (e.g. hold A + arrow = Cmd+arrow).
 - `FNS` (4): Bluetooth profile selection (1-5) and BT_CLR. Mute as a "canary" key. `&bootloader` and `&sys_reset` on the outer column of each half (these act only on the half where the key is pressed, so each half needs its own). `&soft_off` (hold 1 s) at the bottom-left; it powers both halves fully off, and each half's reset button turns it back on.
 
+**Conditional layers:**
+- NUMPAD + NAV held together activates FNS (`tri_layer` node). FNS must stay the highest-numbered of the three layers.
+
 **Combos:**
 - F+J (positions 16+19): ESC
 - G+H (positions 17+18): Caps Word
