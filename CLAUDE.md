@@ -57,6 +57,7 @@ Two hold-tap behaviors with identical timing; they differ only in `hold-trigger-
 - Keyboard name: "Geo's Corne"
 - No LEDs or OLED are installed, so RGB underglow, display, and external power control are left at defaults and have no keymap bindings
 - Deep sleep: enabled, 30-minute timeout (`CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=1800000`)
+- Peripheral battery proxy: enabled. The left half reports both battery levels to the host. Host support for two battery levels varies (macOS often shows only one).
 - Soft off: enabled (`CONFIG_ZMK_PM_SOFT_OFF=y`) for the `&soft_off` key on FNS
 
 ### config/west.yml
