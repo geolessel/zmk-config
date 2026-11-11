@@ -70,4 +70,3 @@ West manifest pointing to `zmkfirmware/zmk` on `main`. Defines the firmware sour
 - Each layer has a `display-name` (shown in ZMK Studio and on displays). Give new layers one too.
 - A commented-out blank layer template is at the bottom of the keymap file — use it when adding new layers.
 - Bluetooth profiles in the FNS layer use `&bt BT_SEL N` with N from 1–5.
-- The `global-quick-tap` property on the `hm` behavior is deprecated in newer ZMK — if upgrading ZMK, it should be replaced with `require-prior-idle-ms`.
