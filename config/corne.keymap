@@ -104,15 +104,16 @@
 // ┠───────┼───────┼───────┼───────┼───────┼───────┨                     ┠───────┼───────┼───────┼───────┼───────┼───────┨
 // ┃ RESET │ BT 4  │ BT 5  │       │       │       ┃                     ┃       │       │       │       │       │ RESET ┃
 // ┠───────┼───────┼───────┼───────┼───────┼───────┨                     ┠───────┼───────┼───────┼───────┼───────┼───────┨
-// ┃       │ BT 1  │ BT 2  │ BT 3  │       │       ┃                     ┃       │       │       │       │       │       ┃
+// ┃SOFTOFF│ BT 1  │ BT 2  │ BT 3  │       │       ┃                     ┃       │       │       │       │       │       ┃
 // ┗━━━━━━━┷━━━━━━━┷━━━━━━━╅───────┼───────┼───────┨                     ┠───────┼───────┼───────╆━━━━━━━┷━━━━━━━┷━━━━━━━┛
 //                         ┃       │       │       ┃                     ┃       │       │       ┃
 //                         ┗━━━━━━━┷━━━━━━━┷━━━━━━━┛                     ┗━━━━━━━┷━━━━━━━┷━━━━━━━┛
 //  MUTE*: use as a canary to make sure you can get to this layer
 //  BOOT, RESET: act only on the half that is pressed, so each half has its own
+//  SOFTOFF: hold 1 s to turn both halves fully off; press each half's reset button to turn on
     &bootloader  &trans        &trans        &trans        &trans  &bt BT_CLR  &kp C_MUTE  &trans  &trans  &trans  &trans  &bootloader
     &sys_reset   &bt BT_SEL 4  &bt BT_SEL 5  &trans        &trans  &trans      &trans      &trans  &trans  &trans  &trans  &sys_reset
-    &trans       &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans  &trans      &trans      &trans  &trans  &trans  &trans  &trans
+    &soft_off    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans  &trans      &trans      &trans  &trans  &trans  &trans  &trans
                                              &trans        &trans  &trans      &trans      &trans  &trans
       >;
     };
@@ -149,6 +150,11 @@
 };
 
 ////// BEHAVIORS ///////////////////////////////////////////////////////////////////////////////////////
+// The right half turns off as soon as the key is pressed, not after the hold.
+&soft_off {
+  hold-time-ms = <1000>;
+};
+
 / {
   behaviors {
     // https://zmk.dev/docs/keymaps/behaviors/hold-tap
