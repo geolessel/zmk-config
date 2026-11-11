@@ -30,6 +30,8 @@ The keymap defines 5 layers, combos, and a custom hold-tap behavior. Each layer 
 - F+J (positions 16+19): ESC
 - G+H (positions 17+18): Caps Word
 
+Both combos use `require-prior-idle-ms = 150`: they do not fire if another key was pressed in the previous 150 ms. This stops accidental triggers during fast typing (e.g. "gh" in "night").
+
 **Key position grid** (for combo definitions):
 ```
  0   1   2   3   4   5     6   7   8   9  10  11
