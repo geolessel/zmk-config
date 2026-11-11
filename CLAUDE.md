@@ -20,11 +20,11 @@ All config lives in `config/`.
 The keymap defines 5 layers, combos, and a custom hold-tap behavior. Each layer has ASCII art showing the layout — use these as the authoritative reference for key positions.
 
 **Layers:**
-- `STAY_HOME` (0): Primary layer. Home row mods — Cmd/Opt/Ctrl on A/S/D and K/L/; via the `&hm` hold-tap behavior.
+- `STAY_HOME` (0): Primary layer. Home row mods — Cmd/Opt/Ctrl on A/S/D and K/L/; via the `&hml` / `&hmr` hold-tap behaviors.
 - `NUMPAD` (1): Right-hand numpad (7-8-9 / 4-5-6 / 1-2-3 / 0), plus grave, backslash, apostrophe.
 - `NUM2` (2): Left-hand numbers with brackets/parens, right-hand arrows + media controls. Sticky FNS on right thumb.
 - `NAV` (3): Brackets/parens on left, arrows + media on right. Similar to NUM2 but without numbers. The left half is `&trans`, so home row mods stay active (e.g. hold A + arrow = Cmd+arrow).
-- `FNS` (4): Bluetooth profile selection (1-5) and BT_CLR. Mute as a "canary" key.
+- `FNS` (4): Bluetooth profile selection (1-5) and BT_CLR. Mute as a "canary" key. `&bootloader` and `&sys_reset` on the outer column of each half (these act only on the half where the key is pressed, so each half needs its own).
 
 **Combos:**
 - F+J (positions 16+19): ESC
