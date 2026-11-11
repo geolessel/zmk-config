@@ -62,7 +62,9 @@ Two hold-tap behaviors with identical timing; they differ only in `hold-trigger-
 
 ### config/west.yml
 
-West manifest pointing to `zmkfirmware/zmk` on `main`. Defines the firmware source to build against.
+West manifest that pins `zmkfirmware/zmk` to one commit of `main`. Defines the firmware source to build against. The last ZMK release (v0.3) appears to use Zephyr 3.5, which probably does not accept the `nice_nano//zmk` board name, so a `main` commit is pinned instead of a release tag.
+
+To update ZMK, change `revision:` in `config/west.yml` and the `@<sha>` in `.github/workflows/build.yml` to the same new commit. Get the newest commit with `git ls-remote https://github.com/zmkfirmware/zmk refs/heads/main`.
 
 ## Editing Guidelines
 
