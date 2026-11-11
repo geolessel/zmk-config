@@ -24,7 +24,7 @@ The keymap defines 5 layers, combos, and a custom hold-tap behavior. Each layer 
 - `NUMPAD` (1): Right-hand numpad (7-8-9 / 4-5-6 / 1-2-3 / 0), plus grave, backslash, apostrophe.
 - `NUM2` (2): Left-hand numbers with brackets/parens, right-hand arrows + media controls. Sticky FNS on right thumb.
 - `NAV` (3): Brackets/parens on left, arrows + media on right. Similar to NUM2 but without numbers. The left half is `&trans`, so home row mods stay active (e.g. hold A + arrow = Cmd+arrow).
-- `FNS` (4): Bluetooth profile selection (1-5) and BT_CLR. Mute as a "canary" key. External power off.
+- `FNS` (4): Bluetooth profile selection (1-5) and BT_CLR. Mute as a "canary" key.
 
 **Combos:**
 - F+J (positions 16+19): ESC
@@ -52,9 +52,7 @@ Two hold-tap behaviors with identical timing; they differ only in `hold-trigger-
 ### config/corne.conf
 
 - Keyboard name: "Geo's Corne"
-- RGB underglow: disabled
-- OLED display: disabled
-- External power: enabled
+- No LEDs or OLED are installed, so RGB underglow, display, and external power control are left at defaults and have no keymap bindings
 - Deep sleep: enabled, 30-minute timeout (`CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=1800000`)
 
 ### config/west.yml
