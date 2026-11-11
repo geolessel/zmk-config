@@ -40,11 +40,14 @@ Both combos use `require-prior-idle-ms = 150`: they do not fire if another key w
                 36  37  38    39  40  41
 ```
 
-**Custom `hm` (homerow_mods) behavior:**
-- `tapping-term-ms = 300` — hold duration before activating modifier
+**Custom `hml` / `hmr` (homerow_mods_left / homerow_mods_right) behaviors:**
+
+Two hold-tap behaviors with identical timing; they differ only in `hold-trigger-key-positions`. `hml` (A/S/D) resolves to hold only when the other key is on the right half or a thumb; `hmr` (K/L/;) only when it is on the left half or a thumb. The `KEYS_L`, `KEYS_R`, and `THUMBS` macros at the top of the keymap hold the position lists.
+- `tapping-term-ms = 250` — hold duration before activating modifier
 - `quick-tap-ms = 200` — window for rapid successive taps (taps immediately on second press)
-- `global-quick-tap` — any recent keypress (not just this key) triggers quick-tap
+- `require-prior-idle-ms = 200` — if any key was pressed in the last 200 ms, the key is always a tap
 - `flavor = "balanced"` — decides tap vs hold based on whether the key is released before or after another key
+- `hold-trigger-key-positions` + `hold-trigger-on-release` — same-hand keys resolve as tap, except other mods (so A+S = Cmd+Opt still works). A same-hand shortcut such as Cmd+C with A needs A held past the tapping term first; or use the opposite-hand mod.
 
 ### config/corne.conf
 
